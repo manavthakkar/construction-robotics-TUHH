@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/eventemitter2@6.4.9/lib/eventemitter2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.10.1/dist/nipplejs.min.js"></script>
+    <title>Robot Control</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-family: 'Battambang', system-ui; font-size: 56px; color: rgb(42, 28, 147); text-shadow: 15px red;">Robot Control</h1>
+
+    <iframe src="http://localhost:8080/stream_viewer?topic=/midog1/camera/image_color" frameborder="frameborder" allowfullscreen scrolling="yes"></iframe>
+
+    <!-- Button 1 UP -->
+    <button style="bottom: 65vh; left: 15vw;" id="move-up">
+        <div class="arrow-up"></div>
+    </button>
+
+    <!-- Button 2 LEFT -->
+    <button style="bottom: 55vh; left: 9vw;" id="move-left">
+        <div class="arrow-left"></div>
+    </button>
+
+    <!-- Button 3 RIGHT -->
+    <button id="move-right" style="bottom: 55vh; left: 21.5vw;">
+        <div class="arrow-right"></div>
+    </button>
+
+    <!-- Button 4 DOWN-->
+    <button id="move-down" style="bottom: 45vh; left: 15vw;">
+        <div class="arrow-down"></div>
+    </button>
+
+    <!-- Button 5 "X" -->
+    <button id="move-stop" class="x-button" style="bottom: 55vh; left: 14.5vw;">X</button>
+
+    <!-- Pushups Button -->
+    <button id="pushup" class="motion-button" style="bottom: 28vh; left: 12vw;">Pushups</button>
+
+    <!-- Greeting Button -->
+    <button id="greeting" class="motion-button" style="bottom: 80vh; left: 12vw;">Greeting</button>
+
+    <!-- Crawl Right Button -->
+    <button id="crawl-right" class="motion-button" style="bottom: 80vh; left: 80vw; ">Crawl ➡️</button>
+
+    <!-- Crawl Left Button -->
+    <button id="crawl-left" class="motion-button" style="bottom: 28vh; left: 80vw; ">⬅️ Crawl</button>
+
+    <div id="control-container">
+        <div id="joystick-container"></div>
+    </div>
+
+    <label class="switch">
+        <input type="checkbox" id="toggleSwitch" onchange="sendCommand()">
+        <span class="slider"></span>
+      </label>
+    
+    <!-- <p>Following Mode</p> -->
+
+    <script src="script.js"></script>
+</body>
+</html>

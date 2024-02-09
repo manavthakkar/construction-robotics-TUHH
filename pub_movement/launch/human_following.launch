@@ -1,0 +1,20 @@
+<launch>
+
+    <!-- Launch rosbridge_websocket -->
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+
+    <!-- Launch web_video_server -->
+    <node name="web_video_server" pkg="web_video_server" type="web_video_server"/>
+
+    <!-- Launch human_following_laptop.py -->
+    <node name="human_following" pkg="pub_movement" type="human_following_laptop.py" output="screen">
+        <param name="robot_name" value="midog1"/> 
+    </node>
+
+    <!-- Launch movement.py -->
+    <node name="movement" pkg="pub_movement" type="movements.py" output="screen">
+        <param name="robot_name" value="midog1"/> 
+    </node>
+
+</launch>
+

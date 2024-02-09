@@ -1,0 +1,237 @@
+/* body{
+    margin: 50px;
+} */
+
+body {
+  background-image: url('bg_img.jpg');
+  background-size: cover;
+}
+
+/* p{
+  position: absolute; 
+  bottom: 23.5vh; 
+  left: 35vw; 
+  font-family: 'Battambang';
+  font-style: italic; 
+  font-size: 20px; 
+  color: rgb(51, 5, 125);
+} */
+
+iframe {
+  position: absolute;
+  top: 43vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  height: 480px;
+  border: 3px solid rgb(255, 0, 0);
+  border-radius: 20px;
+}
+
+
+button {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 380px;
+  left: 400px;
+  background-color: #004dff;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  border: #004dff;
+  transition: 0.5s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: #020cd1;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35%;
+  margin-bottom: 60%;
+  border-bottom: 25px solid white;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 15px;
+  /* Adjust this value to center the arrow */
+  margin-right: 30%;
+  /* Adjust this value to center the arrow */
+  border-right: 25px solid white;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 35%;
+  /* Adjust this value to center the arrow */
+  margin-right: 5px;
+  /* Adjust this value to center the arrow */
+  border-left: 25px solid white;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  margin-top: 30%;
+  /* Adjust this value to center the arrow */
+  margin-bottom: 5px;
+  /* Adjust this value to center the arrow */
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 25px solid white;
+}
+
+.x-button {
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  background-color: #FF0000;
+  /* Red color for "X" button, adjust as needed */
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 34px;
+  /* Adjust font size as needed */
+  font-weight: bold;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  border: #FF0000;
+  /* Red color for "X" button, adjust as needed */
+  transition: 0.5s;
+}
+
+.x-button:hover {
+  transform: scale(1.1);
+}
+
+.x-button:active {
+  background-color: #990000;
+  /* Darker red color for active state, adjust as needed */
+}
+
+.motion-button {
+  width: 200px;
+  height: 80px;
+  position: absolute;
+  background-color: #0e4fdc;
+  /* color for "Pushups" button, adjust as needed */
+  color: #fbf8f8;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 34px;
+  /* Adjust font size as needed */
+  font-weight: bold;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  border: #ab0202;
+  /* color for "Pushups" button, adjust as needed */
+  transition: 0.5s;
+}
+
+.motion-button:hover {
+  transform: scale(1.1);
+}
+
+.motion-button:active {
+  background-color: #990000;
+  /* Darker red color for active state, adjust as needed */
+}
+
+#control-container {
+  position: absolute;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#joystick-container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 80vw;
+  top: 14vh;
+  margin: 20px auto;
+}
+
+/* Code for Toggle Switch */
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: absolute;
+  top: 71vh;
+  right: 50vw;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #9fccfa;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  width: 2em;
+  inset: 0;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.switch input:checked + .slider {
+  background: #0974f1;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #0974f1;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.6em);
+}
